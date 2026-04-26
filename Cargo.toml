@@ -1,15 +1,18 @@
-[package]
-name = "lantern"
-version = "0.1.0"
+[workspace]
+members = ["program"]
+resolver = "2"
+
+[workspace.package]
+version = "0.0.1"
 edition = "2021"
+readme = "README.md"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace.dependencies]
+pinocchio = "0.10.0"
 
-[dependencies]
-anyhow = "1.0.80"
-dotenv = "0.15.0"
-hex = "0.4.3"
-rocksdb = "0.22.0"
-sha2 = "0.10.8"
-solana-client = "1.18.3"
-tokio = { version = "1.36.0", features = ["full"] }
+[workspace.lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = [
+    'cfg(target_os, values("solana"))',
+    'cfg(feature, values("frozen-abi", "no-entrypoint"))',
+]
