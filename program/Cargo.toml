@@ -1,0 +1,20 @@
+[package]
+name = "lantern-program"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+name = "lantern_program"
+
+[dependencies]
+pinocchio.workspace = true
+pinocchio-associated-token-account.workspace = true
+pinocchio-log.workspace = true
+pinocchio-pubkey.workspace = true
+pinocchio-system.workspace = true
+pinocchio-token.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true
