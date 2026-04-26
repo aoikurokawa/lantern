@@ -9,6 +9,7 @@ readme = "README.md"
 
 [workspace.dependencies]
 pinocchio = "0.10.0"
+pinocchio-pubkey = "0.3.0"
 
 [workspace.lints.rust.unexpected_cfgs]
 level = "warn"
