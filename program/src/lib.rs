@@ -1,8 +1,8 @@
-use pinocchio::{AccountView, Address, ProgramResult, entrypoint};
+use pinocchio::{entrypoint, AccountView, Address, ProgramResult};
 
 entrypoint!(process_instruction);
 
-pinocchio_pubkey::declare_id!("Lann5fHSrV7sswqd5r55n5hN43DHcmveMZGpY7EufP5");
+// pinocchio_pubkey::declare_id!("Lann5fHSrV7sswqd5r55n5hN43DHcmveMZGpY7EufP5");
 
 fn process_instruction(
     _program_id: &Address,
