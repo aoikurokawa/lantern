@@ -9,6 +9,7 @@ name = "lantern_program"
 
 [dependencies]
 pinocchio.workspace = true
+pinocchio-pubkey = "0.3.0"
 
 [lints]
 workspace = true
